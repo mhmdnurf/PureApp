@@ -15,7 +15,7 @@ const App = () => {
       <Tab.Navigator
         initialRouteName="Dashboard"
         screenOptions={{
-          tabBarActiveTintColor: '#159895',
+          tabBarActiveTintColor: '#30A2FF',
           headerShown: false,
           tabBarStyle: {
             backgroundColor: 'white',

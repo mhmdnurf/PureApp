@@ -1,26 +1,35 @@
 import React from 'react';
-import {ScrollView, Image, View, Text} from 'react-native';
+import {ScrollView, View, Text} from 'react-native';
+import DataPendaftar from '../components/DataPendaftar';
+import Pengumuman from '../components/Pengumuman';
 
 export default function Dashboard() {
   return (
-    <ScrollView>
-      <View style={{backgroundColor: '#159895'}}>
-        <Text style={{padding: 16, color: 'white'}}>Dashboard</Text>
-      </View>
-      <View style={{backgroundColor: 'white', height: 200, padding: 16}}>
-        <Text style={{textDecorationLine: 'underline'}}>
-          Jadwal Sidang yang akan dilaksanakan.
+    <ScrollView style={{backgroundColor: '#30A2FF'}}>
+      <View>
+        <Text
+          style={{
+            padding: 16,
+            marginTop: 16,
+            color: 'white',
+            fontSize: 24,
+            fontWeight: 'bold',
+          }}>
+          Dashboard
+        </Text>
+        <Text
+          style={{
+            paddingBottom: 16,
+            paddingHorizontal: 16,
+            color: 'white',
+            fontSize: 18,
+            fontWeight: 'bold',
+          }}>
+          Welcome Back, Muhammad Nurfatkhur Rahman
         </Text>
       </View>
-      <View style={{backgroundColor: 'white', padding: 16, margin: 16}}>
-        <View style={{flexDirection: 'row', alignItems: 'center'}}>
-          <Image
-            source={require('../assets/icons/light-emergency-on.png')}
-            style={{width: 24, height: 24, marginRight: 8}}
-          />
-          <Text>Pengumuman</Text>
-        </View>
-      </View>
+      <DataPendaftar />
+      <Pengumuman />
     </ScrollView>
   );
 }
